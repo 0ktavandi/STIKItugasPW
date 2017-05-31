@@ -31,13 +31,12 @@ function tugas(){
 	}
 	echo "</select>";
 	echo "<input type=\"submit\" name=\"submit\" value=\"Submit\">";
-	//mysql_real_escape_string($foo = date($_POST['Y']."-".$_POST['m']."-".$_POST['d']));
 	$foo = date($_POST['Y']."-".$_POST['m']."-".$_POST['d']);
 	//$safe = mysqli_real_escape_string($foo);
 	if(isset($_POST['submit'])){
 	$query = "INSERT INTO tglahir (tgl) VALUES ('$foo')";
 	if (!mysqli_query($conn, $query)) {
-		echo "<script>alert('Error Message :')".mysqli_error($conn)."</script>";
+		echo "Error Message : ".mysqli_error($conn);
 	}else{
 	echo "<script>alert('success')</script>";
 	}
