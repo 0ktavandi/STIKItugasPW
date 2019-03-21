@@ -12,3 +12,4 @@ $fp = fopen(time().'.cpp', 'a+');
 return $fp;
 }
 generateWord($argv[1]);
+//php thisfile.php filestring.txt
